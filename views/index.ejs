@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="EUC-KR"/>
+    <title>Log Management</title>
+    <link rel="stylesheet" href="public/css/style.css"/>
+</head>
+<body>
+<div id="mainError">
+    <header>
+        <p id="Errorname"><%= errorname %></p>
+    </header>
+    <section>
+        <h4>ErrorLog : </h4>
+        <div id="output">File Contents</div>
+        <p><%= buf %></p>
+    </section>
+    <aside>
+        <p>LogQueue</p>
+        <article>
+            <h5>NullPointerException</h5>
+        </article>
+    </aside>
+    <footer>
+        <p>important : </p>
+    </footer>
+</div>
+<script src="index.js"></script>
+<!--<script src="rayout.js"></script>-->
+</body>
+</html>

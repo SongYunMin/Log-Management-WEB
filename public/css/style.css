@@ -1,0 +1,87 @@
+body {
+  background-color: whitesmoke;
+  width: 900px;
+}
+
+div#mainError {
+  width: 100%;
+  text-align: left;
+  min-height: 300px;
+  margin: 0 auto;
+}
+
+header, footer, nav, aside, section {
+  border: 1px solid #999;
+  border:none;
+  margin: 5px;
+  padding: 10px;
+}
+
+header {
+  height: 50px;
+  background-color: #FBFCFC;
+  font-size:25px;
+  font-weight: bold;
+  text-align: left;
+
+}
+
+nav, section, aside {
+  float: left;
+  height: 200px;
+}
+
+nav {
+  background-color: goldenrod;
+  width: 100px;
+}
+
+section {
+  background-color: whitesmoke;
+  width: 604px;
+  height: 700px;
+  overflow: auto;
+}
+
+aside {
+  background-color: darkgray;
+  width: 230px;
+  height: 700px;
+}
+
+footer {
+  height: 50px;
+  background-color: cornsilk;
+  position: relative;
+  clear: both;
+  font-weight: bold;
+}
+
+article {
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  background-color: #999;
+
+}
+
+h1#Errorname {
+  color: red;
+}
+
+div#mainError {
+}
+
+div#logPrint {
+  width: 700px;
+  height: 700px;
+  margin-top: 20px;
+  background-color: #FBFCFC;
+  float: "center";
+}
+
+div#queueLog {
+  horiz-align: right;
+  width: 300px;
+  height: 700px;
+}
