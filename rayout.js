@@ -11,16 +11,19 @@ app.use(express.static(__dirname + '/'));
 const server = app.listen(2000, function () {
     console.log("Express server has started on port 2000")
 });
-
-let buf;
+let errorlog;
 let fs = require('fs');
 fs.readFile('log.txt', 'utf-8', function (err, data) {
-        buf = data;
-        console.log(buf);
+        errorlog = data;
+        console.log(errorlog);
     }
 )
 // 로그 출력
 app.get("/", function (req, res) {
     console.log("Web Page Upload");
-    res.render("index", {buf: buf});
+    res.render("index", {errorlog: errorlog});
 });
+
+function NameSearch(){
+
+}
