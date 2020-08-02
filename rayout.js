@@ -19,11 +19,13 @@ fs.readFile('log.txt', 'utf-8', function (err, data) {
     }
 )
 // 로그 출력
+// TODO : 로그를 로딩 하는 시간이 오래 걸림
 app.get("/", function (req, res) {
     console.log("Web Page Upload");
     res.render("index", {errorlog: errorlog});
 });
 
+// TODO : Log를 파싱, 구문분석을 진행해서 각각에 위치로 Set 되는 메소드 정의 필요
 function NameSearch(){
 
 }
