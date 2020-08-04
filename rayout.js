@@ -26,6 +26,7 @@ app.get("/", function (req, res) {
 });
 
 // TODO : Log를 파싱, 구문분석을 진행해서 각각에 위치로 Set 되는 메소드 정의 필요
+// TODO : Node.js -> Axios, Cheerio 라이브러리를 이용하여 Android Developer Web 크롤링
 function NameSearch(){
 
 }
