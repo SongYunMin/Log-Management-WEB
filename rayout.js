@@ -11,6 +11,7 @@ app.use(express.static(__dirname + '/'));
 const server = app.listen(2000, function () {
     console.log("Express server has started on port 2000")
 });
+// TODO : 에러로그 분산 DB 사용해서 딜레이 줄여야 함
 let errorlog;
 let fs = require('fs');
 fs.readFile('log.txt', 'utf-8', function (err, data) {
