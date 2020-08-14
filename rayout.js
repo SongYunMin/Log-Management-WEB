@@ -31,6 +31,7 @@ function fileRead() {
     NameSearch(errorlog);
 }
 
+// TODO : Async, sync 에 대한 확실한 이해가 필요함
 // TODO : Log를 파싱, 구문분석을 진행해서 각각에 위치로 Set 되는 메소드 정의 필요
 function NameSearch(errorLog){
     //let ch = errorLog.indexOf("NullPointerException");
