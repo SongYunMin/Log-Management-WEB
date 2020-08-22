@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));  // URL 인코딩 안함
 app.use(bodyParser.json());                         // JSON 타입으로 파싱하게 설정
 app.use(express.static(__dirname + '/'));
 
+// TODO : elastic 분산 DB 사용 고려
 const server = app.listen(2000, function () {
     console.log("Express server has started on port 2000")
 });
