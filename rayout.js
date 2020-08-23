@@ -20,6 +20,13 @@ function fileRead() {
     let fs = require('fs');
     fs.readFile('log.txt', 'utf-8', function (err, data) {
             errorlog = data;
+            let name = errorlog.indexOf("NullPointerException");
+            const errorTest = "NullPointerException";
+            // TODO :
+            console.log("에러 길이 : "+errorTest.length);
+            console.log(name);
+            let test = errorlog.substring(name,name+errorTest.length);
+            console.log(test);
 
         }
     );
@@ -31,6 +38,7 @@ function fileRead() {
         console.log("Web Page Upload");
         res.render("index", {errorlog: errorlog});
     });
+    // 5초 뒤 setTimeout 메소드 실행
     setTimeout(NameSearch, 5000, errorlog);
 }
 
