@@ -3,6 +3,7 @@ const ejs = require("ejs");
 const bodyParser = require('body-parser');
 const app = express();
 
+
 // Network connect Area
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: false}));  // URL 인코딩 안함

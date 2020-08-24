@@ -57,12 +57,10 @@ footer {
   font-weight: bold;
 }
 
-article {
-  width: 200px;
+.article {
+  width: 230px;
   height: 50px;
-  margin: 10px;
   background-color: #999;
-
 }
 
 h1#Errorname {
