@@ -32,7 +32,8 @@ app.get("/", function (req, res) {
 
 let file = fs.readFile('log.txt', 'utf-8', function (err, data) {
         errorLog = data;
-        // for(let i=0;i<ERROR.length;i++) {
+        // for(let i=0;i<ERROR.length;
+    // i++) {
         //     // TODO : 2중 for 이용, 에러 분석
         //     let name = errorLog.indexOf("NullPointerException");
         // }
