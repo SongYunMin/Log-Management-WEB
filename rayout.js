@@ -24,7 +24,7 @@ let errorQueue;             // Error Queue 에 포함될 변수
 // 파일을 읽으면서 구문 분석 진행 함
 function fileRead() {
     let fs = require('fs');
-    fs.readFile('log.txt', 'utf-8', function (err, data) {
+    let file = fs.readFile('log.txt', 'utf-8', function (err, data) {
             errorLog = data;
             // TODO : 에러 부분 크롤링 필요
             // TODO : 크롤링 이후 현재 로그에 있는 값 분석, Web 출력
