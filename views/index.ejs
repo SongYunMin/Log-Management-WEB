@@ -8,17 +8,19 @@
 <body>
 <div id="mainError">
     <header class="errorName">
-        <p id="Errorname"><%=errorHead%></p>
+   <%=errorHead%>
     </header>
     <section>
         <h4>ErrorLog : </h4>
-        <div id="output">File Contents</div>
         <p><%=errorlog%></p>
     </section>
     <aside>
         <p>LogQueue</p>
-        <button class="article">
-            <%=errorQueue%>
+        <% for(let i=0;i<errorQueue.length;i++){ %>
+        <button class="article" onclick="button_click();">
+            <%= errorQueue[i] %>
+        </button>
+        <% } %>
         </article>
     </aside>
     <footer>
@@ -26,6 +28,6 @@
     </footer>
 </div>
 <script src="index.js"></script>
-<!--<script src="rayout.js"></script>-->
+<script src="rayout.js"></script>
 </body>
 </html>

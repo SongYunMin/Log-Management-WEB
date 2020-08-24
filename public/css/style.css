@@ -1,9 +1,9 @@
 body {
   background-color: whitesmoke;
-  width: 900px;
+  width: 100%;
 }
 
-div#mainError {
+.mainError {
   width: 100%;
   text-align: left;
   min-height: 300px;
@@ -14,13 +14,14 @@ header, footer, nav, aside, section {
   border: 1px solid #999;
   border:none;
   margin: 5px;
-  padding: 10px;
+  padding: 3px;
 }
 
-header {
+.errorName {
+  width: 100%;
   height: 50px;
-  background-color: #FBFCFC;
-  font-size:25px;
+  /*background-color: #FBFCFC;*/
+  font-size:40px;
   font-weight: bold;
   text-align: left;
 
@@ -38,7 +39,7 @@ nav {
 
 section {
   background-color: whitesmoke;
-  width: 604px;
+  width: 1000px;
   height: 700px;
   overflow: auto;
 }
