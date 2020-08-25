@@ -7,17 +7,17 @@
 </head>
 <body>
 <div id="mainError">
-    <header class="errorName">
+    <header class="errorName" id="header">
    <%=errorHead%>
     </header>
     <section>
         <h4>ErrorLog : </h4>
-        <p><%=errorlog%></p>
+        <p id="section"><%=errorlog%></p>
     </section>
     <aside>
         <p>LogQueue</p>
         <% for(let i=0;i<errorQueue.length;i++){ %>
-        <button class="article" onclick="button_click();">
+        <button class="article" id="article" onclick="button_click();">
             <%= errorQueue[i] %>
         </button>
         <% } %>
