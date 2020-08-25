@@ -6182,6 +6182,36 @@
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at sbr.d(:com.google.android.gms@19275037@19.2.75 (100400-269183835):4)
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at scg.a(:com.google.android.gms@19275037@19.2.75 (100400-269183835):53)
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at anfh.a(:com.google.android.gms@19275037@19.2.75 (100400-269183835):32)
+
+--------- beginning of crash
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: FATAL EXCEPTION: main
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: Process: com.example.mobile_programming_term_project, PID: 16460
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: java.lang.IllegalAccessException: Attempt to get length of null array
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:573)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: Start
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: timeout = -1 mIsAcquired = 0  mTagName : AudioFlinger 
+07-22 15:44:25.901  3311  3635 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquireDVFSLock() 
+07-22 15:44:25.901  3311  3635 E NativeSemDvfsCpuManager: acquire:: End
+07-22 15:44:25.953 16833 16833 E Zygote  : isWhitelistProcess - Process is Whitelisted
+07-22 15:44:25.954 16833 16833 E Zygote  : accessInfo : 1
+07-22 15:44:25.955  3313  3313 E lmkd    : Error writing /proc/16460/oom_score_adj; errno=22
+07-22 15:44:25.967 16833 16833 E ng.android.loo: Not starting debugger since process cannot load the jdwp agent.
+07-22 15:44:25.997  3844  4005 E InputDispatcher: channel 'a1787aa 
+
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at anfg.a(:com.google.android.gms@19275037@19.2.75 (100400-269183835):16)
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at anfl.run(:com.google.android.gms@19275037@19.2.75 (100400-269183835):4)
 07-22 15:44:24.775  5083 16798 E FSA2_GroupSyncGrpc: 	at java.lang.Thread.run(Thread.java:764)
@@ -7533,7 +7563,38 @@
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at atnq.b(Unknown Source:2)
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at atmr.run(PG:3)
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at atnr.run(Unknown Source:4)
-07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at java.util.concurrent.ThreadPoolExecutor.runWorker
+
+--------- beginning of crash
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: FATAL EXCEPTION: main
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: Process: com.example.mobile_programming_term_project, PID: 16460
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: java.lang.InstantiationException: Attempt to get length of null array
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:573)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: Start
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: timeout = -1 mIsAcquired = 0  mTagName : AudioFlinger 
+07-22 15:44:25.901  3311  3635 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquireDVFSLock() 
+07-22 15:44:25.901  3311  3635 E NativeSemDvfsCpuManager: acquire:: End
+07-22 15:44:25.953 16833 16833 E Zygote  : isWhitelistProcess - Process is Whitelisted
+07-22 15:44:25.954 16833 16833 E Zygote  : accessInfo : 1
+07-22 15:44:25.955  3313  3313 E lmkd    : Error writing /proc/16460/oom_score_adj; errno=22
+07-22 15:44:25.967 16833 16833 E ng.android.loo: Not starting debugger since process cannot load the jdwp agent.
+07-22 15:44:25.997  3844  4005 E InputDispatcher: channel 'a1787aa 
+
+(ThreadPoolExecutor.java:1167)
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	at anfl.run(Unknown Source:9)
 07-22 15:45:17.947 17055 17134 E Finsky:instant_app_inst: 	... 1 more
@@ -7557,6 +7618,40 @@
 07-22 15:45:18.817  4364  4382 E Auth    : 	at gxr.a(:com.google.android.gms@19275037@19.2.75 (100400-269183835):98)
 07-22 15:45:18.817  4364  4382 E Auth    : 	at gzx.getAuthToken(:com.google.android.gms@19275037@19.2.75 (100400-269183835):29)
 07-22 15:45:18.817  4364  4382 E Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:247)
+
+
+--------- beginning of crash
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: FATAL EXCEPTION: main
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: Process: com.example.mobile_programming_term_project, PID: 16460
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: java.lang.StackOverflowError: Attempt to get length of null array
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:573)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: Start
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: timeout = -1 mIsAcquired = 0  mTagName : AudioFlinger 
+07-22 15:44:25.901  3311  3635 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquireDVFSLock() 
+07-22 15:44:25.901  3311  3635 E NativeSemDvfsCpuManager: acquire:: End
+07-22 15:44:25.953 16833 16833 E Zygote  : isWhitelistProcess - Process is Whitelisted
+07-22 15:44:25.954 16833 16833 E Zygote  : accessInfo : 1
+07-22 15:44:25.955  3313  3313 E lmkd    : Error writing /proc/16460/oom_score_adj; errno=22
+07-22 15:44:25.967 16833 16833 E ng.android.loo: Not starting debugger since process cannot load the jdwp agent.
+07-22 15:44:25.997  3844  4005 E InputDispatcher: channel 'a1787aa 
+
+
+
+
 07-22 15:45:18.817  4364  4382 E Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:114)
 07-22 15:45:18.817  4364  4382 E Auth    : 	at android.os.Binder.transact(Binder.java:675)
 07-22 15:45:18.817  4364  4382 E Auth    : 	at dyk.onTransact(:com.google.android.gms@19275037@19.2.75 (100400-269183835):3)
@@ -7579,6 +7674,37 @@
 07-22 15:45:22.436  4364  5130 E Auth    : 	at gxr.a(:com.google.android.gms@19275037@19.2.75 (100400-269183835):98)
 07-22 15:45:22.436  4364  5130 E Auth    : 	at gzx.getAuthToken(:com.google.android.gms@19275037@19.2.75 (100400-269183835):29)
 07-22 15:45:22.436  4364  5130 E Auth    : 	at android.accounts.AbstractAccountAuthenticator$Transport.getAuthToken(AbstractAccountAuthenticator.java:247)
+
+--------- beginning of crash
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: FATAL EXCEPTION: main
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: Process: com.example.mobile_programming_term_project, PID: 16460
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: java.lang.IndexOutOfBoundException: Attempt to get length of null array
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:573)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: Start
+07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: timeout = -1 mIsAcquired = 0  mTagName : AudioFlinger 
+07-22 15:44:25.901  3311  3635 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquireDVFSLock() 
+07-22 15:44:25.901  3311  3635 E NativeSemDvfsCpuManager: acquire:: End
+07-22 15:44:25.953 16833 16833 E Zygote  : isWhitelistProcess - Process is Whitelisted
+07-22 15:44:25.954 16833 16833 E Zygote  : accessInfo : 1
+07-22 15:44:25.955  3313  3313 E lmkd    : Error writing /proc/16460/oom_score_adj; errno=22
+07-22 15:44:25.967 16833 16833 E ng.android.loo: Not starting debugger since process cannot load the jdwp agent.
+07-22 15:44:25.997  3844  4005 E InputDispatcher: channel 'a1787aa 
+
+
 07-22 15:45:22.436  4364  5130 E Auth    : 	at android.accounts.IAccountAuthenticator$Stub.onTransact(IAccountAuthenticator.java:114)
 07-22 15:45:22.436  4364  5130 E Auth    : 	at android.os.Binder.transact(Binder.java:675)
 07-22 15:45:22.436  4364  5130 E Auth    : 	at dyk.onTransact(:com.google.android.gms@19275037@19.2.75 (100400-269183835):3)
