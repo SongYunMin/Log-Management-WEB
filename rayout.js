@@ -23,6 +23,7 @@ let errorSection = [];
 let errorQueue;             // Error Queue 에 포함될 변수
 
 // '동기' readFileSync , '비동기' readFile
+// 파일을 ㅂ동
 errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {});
 for(let i=0;i<ERROR.length;i++){            // 에러가 담겨있는 배열의 길이
     let name = errorLog.indexOf(ERROR[i]);  // 파일에서 에러의 위치를 찾고
