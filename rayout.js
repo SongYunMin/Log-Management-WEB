@@ -46,32 +46,27 @@ app.get("/", function (req, res) {
 
 // TODO : 버튼 클릭 시 전역 변수 인식 못하는 문제 있음
 function button_click() {
-    // let test =  document.getElementById("section");
-    // test.innerHTML = "TEST";
+    let test =  document.getElementById("section");
+    test.innerHTML = "TEST";
     alert("TEST");
     // app.get("/", function (req, res) {
     console.log("Web Page Upload");
-    for (let i = 0; i < ERROR.length; i++) {
-        for (let j = 0; j < errorHead.length; j++) {
-            if (ERROR[i] === errorHead[j]) {
-                // innerHTML 사용 가능
-                let sectionBuf = document.getElementById("section");
-                let articleBuf = document.getElementById("article");
-                sectionBuf.innerHTML = errorSection[j];
-                articleBuf.innerHTML = errorHead[j];
-                console.log(sectionBuf[j]);
-                console.log(articleBuf[j]);
-                break;
-            }
-        }
-    }
+    // for (let i = 0; i < ERROR.length; i++) {
+    //     for (let j = 0; j < errorHead.length; j++) {
+    //         if (ERROR[i] === errorHead[j]) {
+    //             // innerHTML 사용 가능
+    //             let sectionBuf = document.getElementById("section");
+    //             let articleBuf = document.getElementById("article");
+    //             sectionBuf.innerHTML = errorSection[j];
+    //             articleBuf.innerHTML = errorHead[j];
+    //             console.log(sectionBuf[j]);
+    //             console.log(articleBuf[j]);
+    //             break;
+    //         }
+    //     }
+    // }
     // // 각 위치에 Set함 속성은 Key:Value
     // res.render("index", {errorlog: test, errorQueue: errorQueue, errorHead: errorHead});
     // res.end();
     // });
-    testfunc();
-}
-
-function testfunc() {
-    alert("TEEST");
 }

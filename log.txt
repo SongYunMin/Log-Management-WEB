@@ -8485,6 +8485,7 @@
 07-22 15:54:32.183 18354 18354 E roid.app.camer: Not starting debugger since process cannot load the jdwp agent.
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: [iptables debug]iptables-restore execute *filter
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: -D fw_standby_uid -m owner --uid-owner 10032 -j DROP
+
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: COMMIT
 07-22 15:54:32.242  3464  3572 E IptablesRestoreController: [iptables debug]iptables-restore execute done *filter
 07-22 15:54:32.242  3464  3572 E IptablesRestoreController: -D fw_standby_uid -m owner --uid-owner 10032 -j DROP
