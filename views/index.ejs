@@ -17,9 +17,11 @@
     <aside>
         <p>LogQueue</p>
         <% for(let i=0;i<errorQueue.length;i++){ %>
+        <% if(errorQueue[i] !== undefined) { %>
         <button class="article" id="article" onclick="button_click();">
             <%= errorQueue[i] %>
         </button>
+        <% } %>
         <% } %>
         </article>
     </aside>
