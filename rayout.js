@@ -26,16 +26,28 @@ function main() {
 // Sync : readFileSync , Async : readFile
     errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {
     });
+
     // TODO : 정의된 에러와 파일에서 읽어온 에러가 일치하는지 확인
-    for (var i = 0; i < ERROR.length; i++) {            // Array Length
-        if(ERROR[i] === errorLog.indexOf(ERROR[i])) {
-            let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
+    for (let i = 0; i < ERROR.length; i++) {            // Array Length
+        let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
+        if (name !== -1) {
             console.log(name);
+            // 일치하지 않을때 -1을 반환하니 이상한 값이 같이 들어온 것
             errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
             errorSection[i] = errorLog.substring(name, name + 3000);
-            console.log(errorHead[i]);
         }
+        console.log(errorHead[i]);
     }
+    for(let i=0;i<errorHead.length - 1;i++){
+        if(errorHead.includes(undefined)){
+            errorHead[i]=errorHead[i+1];
+            errorSection[i]=errorHead[i+1];
+            // errorHead[i+1] = undefined;
+            // errorSection[i+1] = undefined;
+        }
+        console.log(errorHead[i]);
+    }
+
 // 로그 출력
 // TODO : 로그를 로딩 하는 시간이 오래 걸림
     app.get("/", function (req, res) {
