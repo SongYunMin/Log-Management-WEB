@@ -26,12 +26,15 @@ function main() {
 // Sync : readFileSync , Async : readFile
     errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {
     });
-    for (let i = 0; i < ERROR.length; i++) {            // Array Length
-        let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
-        console.log(name);
-        errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
-        errorSection[i] = errorLog.substring(name, name + 3000);
-        console.log(errorHead[i]);
+    // TODO : 정의된 에러와 파일에서 읽어온 에러가 일치하는지 확인
+    for (var i = 0; i < ERROR.length; i++) {            // Array Length
+        if(ERROR[i] === errorLog.indexOf(ERROR[i])) {
+            let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
+            console.log(name);
+            errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
+            errorSection[i] = errorLog.substring(name, name + 3000);
+            console.log(errorHead[i]);
+        }
     }
 // 로그 출력
 // TODO : 로그를 로딩 하는 시간이 오래 걸림
@@ -48,23 +51,16 @@ main();
 // TODO : 파라미터로 추가해서 접근
 // Call HTML Method
 function button_click() {
-    let test = document.getElementById("section");
     // test.innerHTML = "TEST";
     // alert("TEST");
     // app.get("/", function (req, res) {
     console.log("Web Page Upload");
-    for (let i = 0; i < ERROR.length; i++) {
-        for (let j = 0; j < errorHead.length; j++) {
-            if (ERROR[i] === errorHead[j]) {
-                // innerHTML 사용 가능
-                let sectionBuf = document.getElementById("section");
-                let articleBuf = document.getElementById("article");
-                sectionBuf.innerHTML = errorSection[j];
-                articleBuf.innerHTML = errorHead[j];
-                console.log(sectionBuf[j]);
-                console.log(articleBuf[j]);
-                break;
-            }
+    for (let i = 0; i < errorHead.length; i++) {
+        if (errorHead[i] === null) {          //  TODO : 논리적 오류 해결해야 함
+            // innerHTML 사용 가능
+            let sectionBuf = document.getElementById("section");
+            let headerBuf = document.getElementById("header");
+            return;
         }
     }
 }
