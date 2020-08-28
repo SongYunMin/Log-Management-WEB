@@ -24,8 +24,8 @@ let errorQueue;             // Error Queue 에 포함될 변수
 // Main Method
 function main() {
 // Sync : readFileSync , Async : readFile
-    errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {});
-    // TODO : 정의된 에러와 파일에서 읽어온 에러가 일치하는지 확인
+    errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {
+    });
     for (let i = 0; i < ERROR.length; i++) {            // Array Length
         let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
         if (name !== -1) {
@@ -36,36 +36,32 @@ function main() {
         }
         console.log(errorHead[i]);
     }
-    // for(let i=0;i<errorHead.length - 1;i++){
-    //     if(errorHead.includes(undefined)){
-    //         errorHead[i]=errorHead[i+1];
-    //         errorSection[i]=errorHead[i+1];
-    //         // errorHead[i+1] = undefined;
-    //         // errorSection[i+1] = undefined;
-    //     }
-    //     console.log(errorHead[i]);
-    }
 
+}
 // 로그 출력
 // TODO : 로그를 로딩 하는 시간이 오래 걸림
-    app.get("/", function (req, res) {
-        console.log("Web Page Upload");
-        // 각 위치에 Set함 속성은 Key:Value
-        res.render("index.ejs", {errorlog: errorSection[0], errorQueue: errorHead, errorHead: errorHead[0]});
-        res.end();
+app.get("/", function (req, res) {
+    console.log("Web Page Upload");
+    // 각 위치에 Set함 속성은 Variable Name : Value
+    res.render("index.ejs", {
+        errorlog: errorSection[0],
+        errorQueue: errorHead,
+        errorHead: errorHead[0]
     });
-
+    res.end();
+});
 
 main();
 
-// TODO : 파라미터로 추가해서 접근
+// TODO : 외부 JS 파일 사용해서 하는것 고려
 // Call HTML Method
 function button_click() {
+
     // test.innerHTML = "TEST";
     // alert("TEST");
     // app.get("/", function (req, res) {
     console.log("Web Page Upload");
-    for (let i = 0; i < errorHead.length; i++) {
+        for (let i = 0; i < errorHead.length; i++) {
         if (errorHead[i] === null) {          //  TODO : 논리적 오류 해결해야 함
             // innerHTML 사용 가능
             let sectionBuf = document.getElementById("section");

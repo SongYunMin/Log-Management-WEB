@@ -17,11 +17,9 @@
     <aside>
         <p>LogQueue</p>
         <% for(let i=0;i<errorQueue.length;i++){ %>
-        <% if(errorQueue[i] !== undefined) { %>
-        <button class="article" id="article" onclick="button_click();">
-            <%= errorQueue[i] %>
-        </button>
-        <% } %>
+            <% if(errorQueue[i] != undefined) { %>
+        <input type="button" class= "article" id="article" value="<%= errorQueue[i]%>">
+            <% } %>
         <% } %>
         </article>
     </aside>
@@ -31,5 +29,6 @@
 </div>
 <script src="index.js"></script>
 <script src="rayout.js"></script>
+<script src="findId.js"></script>
 </body>
 </html>
