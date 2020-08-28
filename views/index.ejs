@@ -18,7 +18,7 @@
         <p>LogQueue</p>
         <% for(let i=0;i<errorQueue.length;i++){ %>
             <% if(errorQueue[i] != undefined) { %>
-        <input type="button" class= "article" id="article" value="<%= errorQueue[i]%>">
+        <input type="button" class= "article" id="article" onclick="testFunc()" value="<%= errorQueue[i]%>">
             <% } %>
         <% } %>
         </article>

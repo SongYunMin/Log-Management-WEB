@@ -49,6 +49,9 @@ app.get("/", function (req, res) {
         errorHead: errorHead[0]
     });
     res.end();
+    module.exports{
+
+    }
 });
 
 main();
@@ -66,6 +69,7 @@ function button_click() {
             // innerHTML 사용 가능
             let sectionBuf = document.getElementById("section");
             let headerBuf = document.getElementById("header");
+
             return;
         }
     }
