@@ -8,17 +8,21 @@
 <body>
 <div id="mainError">
     <header class="errorName" id="header">
-   <%=errorHead%>
+   <%=errorInit%>
     </header>
     <section>
         <h4>ErrorLog : </h4>
-        <p id="section"><%=errorlog%></p>
+        <p id="section"><%=errorSection%></p>
     </section>
     <aside>
         <p>LogQueue</p>
-        <% for(let i=0;i<errorQueue.length;i++){ %>
-            <% if(errorQueue[i] != undefined) { %>
-        <input type="button" class= "article" id="article" onclick="testFunc()" value="<%= errorQueue[i]%>">
+        <% for(let i=0;i<errorHead.length;i++){ %>
+            <% if(errorHead[i] != undefined) { %>
+        <input type="button" class= "article" id="article" onclick="
+                errorH = '<%=errorHead%>;'
+                errorS = '<%=errorSection%>;'
+                index = '<%=i%>;'
+                button_click(errorH, errorS, index)" value="<%=errorHead[i]%>"/>
             <% } %>
         <% } %>
         </article>
