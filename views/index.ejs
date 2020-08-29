@@ -15,14 +15,16 @@
         <p id="section"><%=errorSection%></p>
     </section>
     <aside>
+        <article>
         <p>LogQueue</p>
-        <% for(let i=0;i<errorHead.length;i++){ %>
+        <% for(var i=0;i<errorHead.length;i++){ %>
             <% if(errorHead[i] != undefined) { %>
-        <input type="button" class= "article" id="article" onclick="
-                errorH = '<%=errorHead%>;'
-                errorS = '<%=errorSection%>;'
-                index = '<%=i%>;'
-                button_click(errorH, errorS, index)" value="<%=errorHead[i]%>"/>
+        <input type="button" class= "article" id="article"  value="<%=errorHead[i]%>"
+               onclick="
+                var errorH = '<%=errorHead%>';
+                var errorS = '<%=errorSection%>';
+                var index = '<%=i%>';
+                button_click(errorH, errorS, index)"/>
             <% } %>
         <% } %>
         </article>
@@ -31,8 +33,6 @@
         <p>important : </p>
     </footer>
 </div>
-<script src="index.js"></script>
 <script src="rayout.js"></script>
-<script src="findId.js"></script>
 </body>
 </html>
