@@ -37,6 +37,7 @@ function main() {
     }
     errorInit = errorHead[0];
 }
+
 // 로그 출력
 // TODO : 로그를 로딩 하는 시간이 오래 걸림
 app.get("/", function (req, res) {
@@ -54,18 +55,18 @@ app.get("/", function (req, res) {
 main();
 
 // TODO : 외부 JS 파일 사용해서 하는것 고려
-// Call HTML Method
-function button_click(errorH, errorS, index) {
-    // console.log("message : " + errorH);
-    // console.log("index : " + index);
-    // console.log("Web Page Upload");
-        for (var i = 0; i < errorH.length; i++) {
-        if (errorH[i] === errorH[index]) {          //  TODO : 논리적 오류 해결해야 함
-            // innerHTML 사용 가능
-            let sectionBuf = document.getElementById("section");
-            let headerBuf = document.getElementById("header");
-            sectionBuf.innerHTML = errorS[i];
-            headerBuf.innerHTML = errorH[i];
-        }
-    }
-}
+// // Call HTML Method
+// function button_click() {
+//     console.log("message : " + errorH);
+//     console.log("index : " + index);
+//     console.log("Web Page Upload");
+//     for (var i = 0; i < errorH.length; i++) {
+//         if (errorH[i] === errorH[index]) {          //  TODO : 논리적 오류 해결해야 함
+//             // innerHTML 사용 가능
+//             let sectionBuf = document.getElementById("section");
+//             let headerBuf = document.getElementById("header");
+//             sectionBuf.innerHTML = errorS[i];
+//             headerBuf.innerHTML = errorH[i];
+//         }
+//     }
+// }

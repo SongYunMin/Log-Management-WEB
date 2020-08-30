@@ -8,25 +8,22 @@
 <body>
 <div id="mainError">
     <header class="errorName" id="header">
-   <%=errorInit%>
+        <%= errorInit %>
     </header>
     <section>
         <h4>ErrorLog : </h4>
-        <p id="section"><%=errorSection%></p>
+        <p id="section"><%= errorSection %></p>
     </section>
     <aside>
         <article>
-        <p>LogQueue</p>
-        <% for(var i=0;i<errorHead.length;i++){ %>
-            <% if(errorHead[i] != undefined) { %>
-        <input type="button" class= "article" id="article"  value="<%=errorHead[i]%>"
-               onclick="
-                var errorH = '<%=errorHead%>';
-                var errorS = '<%=errorSection%>';
-                var index = '<%=i%>';
-                button_click(errorH, errorS, index)"/>
+            <p>LogQueue</p>
+            <% for(var i = 0;i < errorHead.length;i++){ %>
+                <% if(errorHead[i] != undefined) { %>
+                <!-- 요놈이 문제인가..? -->
+                <input type="button" class="article" id="article" value="<%= errorHead[i] %>"
+                       onclick="button_click"/>
+                <% } %>
             <% } %>
-        <% } %>
         </article>
     </aside>
     <footer>
@@ -34,5 +31,21 @@
     </footer>
 </div>
 <script src="rayout.js"></script>
+<script>
+    // Call HTML Method
+    function button_click() {
+        console.log("message : ");
+        console.log("index : ");
+        // for (var i = 0; i < errorH.length; i++) {
+        //     if (errorH[i] === errorH[index]) {          //  TODO : 논리적 오류 해결해야 함
+        //         // innerHTML 사용 가능
+        //         let sectionBuf = document.getElementById("section");
+        //         let headerBuf = document.getElementById("header");
+        //         sectionBuf.innerHTML = errorS[i];
+        //         headerBuf.innerHTML = errorH[i];
+        //     }
+        // }
+    }
+</script>
 </body>
 </html>
