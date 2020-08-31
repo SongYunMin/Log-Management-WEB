@@ -6257,7 +6257,7 @@
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view .View.access$3200(View.java:846)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)

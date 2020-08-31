@@ -28,12 +28,31 @@ function main() {
     for (let i = 0; i < ERROR.length; i++) {            // Array Length
         let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
         if (name !== -1) {
-            console.log(name);
+            //console.log(name);
             // 일치하지 않을때 -1을 반환하니 이상한 값이 같이 들어온 것
             errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
-            errorSection[i] = errorLog.substring(name, name + 2000);
+            let buf = errorLog.substring(name, name + 3000);
+            let emptyCheck = 0, emptyCheckBuf = 0;
+            while(true){
+                emptyCheckBuf = buf.indexOf('AndroidRuntime',emptyCheck+14);
+                emptyCheck = emptyCheckBuf;
+                if(emptyCheckBuf === -1){
+                    errorSection[i] = errorLog.substring(name, name+emptyCheck);
+                    break;
+                }
+            }
+
+            // Test Case
+            // emptyCheckBuf = buf.indexOf('AndroidRuntime', emptyCheck+14);
+            // emptyCheck = emptyCheckBuf;
+            // console.log(emptyCheck);
+            // emptyCheckBuf = buf.indexOf('AndroidRuntime', emptyCheck+14);
+            // emptyCheck = emptyCheckBuf;
+            // console.log(emptyCheck);
+            // errorSection[i] = errorLog.substring(name, name+emptyCheck);
+            // console.log(errorSection[i]);
         }
-        console.log(errorHead[i]);
+       // console.log(errorHead[i]);
     }
     errorInit = errorHead[0];
 }
@@ -49,7 +68,6 @@ app.get("/", function (req, res) {
         errorInit: errorInit
     });
     res.end();
-
 });
 
 main();
