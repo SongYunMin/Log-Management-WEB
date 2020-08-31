@@ -19,10 +19,10 @@
             <p>LogQueue</p>
             <% for(var i = 0;i < errorHead.length;i++){ %>
                 <% if(errorHead[i] != undefined) { %>
-                <!-- Input Tag ¿À·ùÀÎÁö È®ÀÎ -->
+                <!-- Input Tag ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ -->
                 <button class="article" onclick="
-                        window.errorH = '<%=JSON.stringify(errorHead) %>';
-                        window.errorS = '<%=JSON.stringify(errorSection)%>';
+                        window.errorH = <%=JSON.stringify(errorHead) %>;
+                        window.errorS = <%=JSON.stringify(errorSection)%>;
                         window.index = '<%=i%>';
                         button_click()">
                     <%=errorHead[i]%>
@@ -45,8 +45,8 @@
             if (errorH[i] === errorH[index]) {
                 let sectionBuf = document.getElementById("section");
                 let headerBuf = document.getElementById("header");
-                sectionBuf.innerHTML = errorS[i];
-                headerBuf.innerHTML = errorH[i];
+                sectionBuf.innerHTML = errorS[i].toString();
+                headerBuf.innerHTML = errorH[i].toString();
             }
         }
     }
