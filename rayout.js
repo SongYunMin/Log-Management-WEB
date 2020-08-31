@@ -33,15 +33,21 @@ function main() {
             errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
             let buf = errorLog.substring(name, name + 3000);
             let emptyCheck = 0, emptyCheckBuf = 0;
+
             while(true){
                 emptyCheckBuf = buf.indexOf('AndroidRuntime',emptyCheck+14);
-                emptyCheck = emptyCheckBuf;
+                // -1 emptyCheck 대입 됨
                 if(emptyCheckBuf === -1){
                     errorSection[i] = errorLog.substring(name, name+emptyCheck);
+                    console.log("start : " + name);
+                    console.log("end : " + (name+emptyCheck));
+                    // console.log("Log : " + errorSection[i]);
                     break;
                 }
-            }
+                emptyCheck = emptyCheckBuf;
 
+            }
+            console.log(errorSection[i]);
             // Test Case
             // emptyCheckBuf = buf.indexOf('AndroidRuntime', emptyCheck+14);
             // emptyCheck = emptyCheckBuf;
@@ -51,6 +57,8 @@ function main() {
             // console.log(emptyCheck);
             // errorSection[i] = errorLog.substring(name, name+emptyCheck);
             // console.log(errorSection[i]);
+            // console.log(name);
+            // console.log(name+emptyCheck);
         }
        // console.log(errorHead[i]);
     }
