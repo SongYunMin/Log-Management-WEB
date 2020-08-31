@@ -33,21 +33,24 @@ function main() {
             errorHead[i] = errorLog.substring(name, name + ERROR[i].length);
             let buf = errorLog.substring(name, name + 3000);
             let emptyCheck = 0, emptyCheckBuf = 0;
+            let lastLine;
 
             while(true){
                 emptyCheckBuf = buf.indexOf('AndroidRuntime',emptyCheck+14);
                 // -1 emptyCheck 대입 됨
                 if(emptyCheckBuf === -1){
-                    errorSection[i] = errorLog.substring(name, name+emptyCheck);
+                    let escape = errorLog.indexOf("\n",emptyCheck);
+                    // for(let j=(name+emptyCheck); j<)
+                    errorSection[i] = errorLog.substring(name, name+escape);
                     console.log("start : " + name);
-                    console.log("end : " + (name+emptyCheck));
-                    // console.log("Log : " + errorSection[i]);
+                    console.log("end(escape) : " + escape);
+                    console.log("Log : " + errorSection[i]);
                     break;
                 }
                 emptyCheck = emptyCheckBuf;
 
             }
-            console.log(errorSection[i]);
+            // console.log(errorSection[i]);
             // Test Case
             // emptyCheckBuf = buf.indexOf('AndroidRuntime', emptyCheck+14);
             // emptyCheck = emptyCheckBuf;
@@ -80,14 +83,13 @@ app.get("/", function (req, res) {
 
 main();
 
-// TODO : 외부 JS 파일 사용해서 하는것 고려
 // // Call HTML Method
 // function button_click() {
 //     console.log("message : " + errorH);
 //     console.log("index : " + index);
 //     console.log("Web Page Upload");
 //     for (var i = 0; i < errorH.length; i++) {
-//         if (errorH[i] === errorH[index]) {          //  TODO : 논리적 오류 해결해야 함
+//         if (errorH[i] === errorH[index]) {
 //             // innerHTML 사용 가능
 //             let sectionBuf = document.getElementById("section");
 //             let headerBuf = document.getElementById("header");
