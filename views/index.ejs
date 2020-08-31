@@ -19,9 +19,14 @@
             <p>LogQueue</p>
             <% for(var i = 0;i < errorHead.length;i++){ %>
                 <% if(errorHead[i] != undefined) { %>
-                <!-- 요놈이 문제인가..? -->
-                <input type="button" class="article" id="article" value="<%= errorHead[i] %>"
-                       onclick="button_click"/>
+                <!-- Input Tag 오류인지 확인 -->
+                <button class="article" onclick="
+                        window.errorH = '<%=JSON.stringify(errorHead) %>';
+                        window.errorS = '<%=JSON.stringify(errorSection)%>';
+                        window.index = '<%=i%>';
+                        button_click()">
+                    <%=errorHead[i]%>
+                </button>
                 <% } %>
             <% } %>
         </article>
@@ -36,15 +41,15 @@
     function button_click() {
         console.log("message : ");
         console.log("index : ");
-        // for (var i = 0; i < errorH.length; i++) {
-        //     if (errorH[i] === errorH[index]) {          //  TODO : 논리적 오류 해결해야 함
-        //         // innerHTML 사용 가능
-        //         let sectionBuf = document.getElementById("section");
-        //         let headerBuf = document.getElementById("header");
-        //         sectionBuf.innerHTML = errorS[i];
-        //         headerBuf.innerHTML = errorH[i];
-        //     }
-        // }
+        for (var i = 0; i < errorH.length; i++) {
+            if (errorH[i] === errorH[index]) {
+                let sectionBuf = document.getElementById("section");
+                let headerBuf = document.getElementById("header");
+                sectionBuf.innerHTML = errorS[i];
+                headerBuf.innerHTML = errorH[i];
+
+            }
+        }
     }
 </script>
 </body>
