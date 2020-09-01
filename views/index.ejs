@@ -8,7 +8,7 @@
 <body>
 <div id="mainError">
     <header class="errorName" id="header">
-        <%= errorInit %>
+        <%= errorHeadInit %>
     </header>
     <section>
         <h4>ErrorLog : </h4>
@@ -22,6 +22,7 @@
                 <button class="article" onclick="
                         window.errorH = <%=JSON.stringify(errorHead) %>;
                         window.errorS = <%=JSON.stringify(errorSection)%>;
+                        window.errorD = <%=JSON.stringify(errorDoc)%>;
                         window.index = '<%=i%>';
                         button_click()">
                     <%=errorHead[i]%>
@@ -30,8 +31,8 @@
             <% } %>
         </article>
     </aside>
-    <footer>
-        <p>important : </p>
+    <footer id ="footer">
+        Android Developer Reference: <a href="<%=errorDocInit%>">Reference</a>
     </footer>
 </div>
 <script src="rayout.js"></script>
@@ -40,12 +41,38 @@
     function button_click() {
         console.log("message : ");
         console.log("index : ");
-        for (var i = 0; i < errorH.length; i++) {
+        for (let i = 0; i < errorH.length; i++) {
             if (errorH[i] === errorH[index]) {
                 let sectionBuf = document.getElementById("section");
                 let headerBuf = document.getElementById("header");
+                let docBuf = document.getElementById("footer");
+
+                // // Sort Section
+                // for (let i = 0; i < errorH.length; i++) {
+                //     for (let j = 0; j < errorH.length - 1; j++) {
+                //         // let op1,op2;
+                //         // op1 = errorH[j].indexOf("Exception");
+                //         // op2 = errorH[j+1].indexOf("Exception");
+                //         if (errorH[j].indexOf("Exception") > errorH[j+1].indexOf("Exception")) {
+                //             let tempHead = errorH[j];
+                //             errorH[j] = errorH[j + 1];
+                //             errorH[j + 1] = tempHead;
+                //             let tempSection = errorS[j];
+                //             errorS[j] = errorS[j + 1];
+                //             errorS[j + 1] = tempSection;
+                //             let tempDoc = errorD[j];
+                //             errorD[j] = errorD[j + 1];
+                //             errorD[j + 1] = tempDoc;
+                //             console.log(errorH);
+                //         }
+                //     }
+                // }
+
                 sectionBuf.innerHTML = errorS[i].toString();
                 headerBuf.innerHTML = errorH[i].toString();
+                errorD[i] = "Android Developer Reference: <a href = '"+errorD[i]+"'> Reference</a>";
+                docBuf.innerHTML = errorD[i].toString();
+                console.log(errorH[1].indexOf("qwerq"));
             }
         }
     }
