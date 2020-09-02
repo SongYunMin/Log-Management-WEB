@@ -32,7 +32,7 @@
         </article>
     </aside>
     <footer id ="footer">
-        Android Developer Reference: <a href="<%=errorDocInit%>">Reference</a>
+        Android Developer Reference: <a href="<%=errorDocInit%>">Move on click</a>
     </footer>
 </div>
 <script src="rayout.js"></script>
@@ -47,11 +47,9 @@
                 let headerBuf = document.getElementById("header");
                 let docBuf = document.getElementById("footer");
 
-
-
                 sectionBuf.innerHTML = errorS[i].toString();
                 headerBuf.innerHTML = errorH[i].toString();
-                errorD[i] = "Android Developer Reference: <a href = '"+errorD[i]+"'> Reference</a>";
+                errorD[i] = "Android Developer Reference: <a href = '"+errorD[i]+"'> Move on click</a>";
                 docBuf.innerHTML = errorD[i].toString();
                 console.log(errorH[1].indexOf("qwerq"));
             }

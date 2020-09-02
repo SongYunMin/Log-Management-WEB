@@ -6187,21 +6187,21 @@
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: FATAL EXCEPTION: main
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: Process: com.example.mobile_programming_term_project, PID: 16460
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: java.lang.IllegalAccessException: Attempt to get length of null array
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:573)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.access$3200(View.java:846)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:965)
 07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: Start
 07-22 15:44:25.899  3311  3635 E NativeSemDvfsCpuManager: acquire:: timeout = -1 mIsAcquired = 0  mTagName : AudioFlinger 
 07-22 15:44:25.901  3311  3635 E NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::acquireDVFSLock() 
@@ -6255,13 +6255,13 @@
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.StringBuilder.append(StringBuilder.java:182)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.example.mobile_programming_term_project.MainActivity$10.onClick(MainActivity.java:184)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClick(View.java:7352)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.widget.TextView.performClick(TextView.java:14230)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View.performClickInternal(View.java:7318)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view .View.access$3200(View.java:846)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:27800)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:873)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
-07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:214)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:7050)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
 07-22 15:44:25.897 16460 16460 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:494)
@@ -8454,7 +8454,6 @@
 07-22 15:54:32.183 18354 18354 E roid.app.camer: Not starting debugger since process cannot load the jdwp agent.
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: [iptables debug]iptables-restore execute *filter
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: -D fw_standby_uid -m owner --uid-owner 10032 -j DROP
-
 07-22 15:54:32.225  3464  3572 E IptablesRestoreController: COMMIT
 07-22 15:54:32.242  3464  3572 E IptablesRestoreController: [iptables debug]iptables-restore execute done *filter
 07-22 15:54:32.242  3464  3572 E IptablesRestoreController: -D fw_standby_uid -m owner --uid-owner 10032 -j DROP
