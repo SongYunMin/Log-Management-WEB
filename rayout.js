@@ -9,6 +9,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: false}));  // URL Not Encoding
 app.use(bodyParser.json());                         // JSON Type Parsing
 app.use(express.static(__dirname + '/'));
+
 const server = app.listen(2000, function () {
     console.log("Express server has started on port 2000");
 });
@@ -16,6 +17,7 @@ const server = app.listen(2000, function () {
 // Member Field Area
 let ERROR = ["NullPointerException", "IllegalAccessException", "InstantiationException", "StackOverflowError",
     "IndexOutOfBoundException"];
+
 let referenceDoc = ["https://developer.android.com/reference/java/lang/NullPointerException?hl=en",
     "https://developer.android.com/reference/java/lang/IllegalAccessException",
     "https://developer.android.com/reference/java/lang/InstantiationException?hl=en",
@@ -30,7 +32,7 @@ let errorDoc = [];
 // Main Method
 function main() {
 // Sync : readFileSync , Async : readFile
-    errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {
+    let errorLog = fs.readFileSync('log.txt', 'utf-8', function (err, data) {
     });
     for (let i = 0; i < ERROR.length; i++) {            // Array Length
         let name = errorLog.indexOf(ERROR[i]);  // In File Error Detection
@@ -59,32 +61,27 @@ function main() {
     errorHeadInit = errorHead[0];
     errorDocInit = errorDoc[0];
 
-    // // Sort Section
-    // for (let i = 0; i < errorHead.length; i++) {
-    //     for (let j = 0; j < errorHead.length - 1; j++) {
-    //         if(errorHead[j] !== undefined) {
-    //             if (errorHead[j].indexOf("Exception") >
-    //                 errorHead[j + 1].indexOf("Exception")) {
-    //                 let tempHead = errorHead[j];
-    //                 errorHead[j] = errorHead[j + 1];
-    //                 errorHead[j + 1] = tempHead;
-    //                 let tempSection = errorSection[j];
-    //                 errorSection[j] = errorSection[j + 1];
-    //                 errorSection[j + 1] = tempSection;
-    //                 let tempDoc = errorDoc[j];
-    //                 errorDoc[j] = errorDoc[j + 1];
-    //                 errorDoc[j + 1] = tempDoc;
-    //             }
-    //         }
-    //     }
-    // }
-
+    // Sort Section
+    for (let i = 0; i < errorHead.length; i++) {
+        for (let j = 0; j < errorHead.length - 1; j++) {
+            if(errorHead[j] !== undefined) {
+                if (errorHead[j].indexOf("Exception") >
+                    errorHead[j + 1].indexOf("Exception")) {
+                    let tempHead = errorHead[j];
+                    errorHead[j] = errorHead[j + 1];
+                    errorHead[j + 1] = tempHead;
+                    let tempSection = errorSection[j];
+                    errorSection[j] = errorSection[j + 1];
+                    errorSection[j + 1] = tempSection;
+                    let tempDoc = errorDoc[j];
+                    errorDoc[j] = errorDoc[j + 1];
+                    errorDoc[j + 1] = tempDoc;
+                }
+            }
+        }
+    }
 }
-
-
-
-// 로그 출력
-// TODO : 로그를 로딩 하는 시간이 오래 걸림
+// Key : Value Object Transfer
 app.get("/", function (req, res) {
     console.log("Web Page Upload");
     // 각 위치에 Set함 속성은 Variable Name : Value
@@ -97,5 +94,4 @@ app.get("/", function (req, res) {
     });
     res.end();
 });
-
 main();
