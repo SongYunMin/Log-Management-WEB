@@ -61,25 +61,25 @@ function main() {
     errorHeadInit = errorHead[0];
     errorDocInit = errorDoc[0];
 
-    // Sort Section
-    for (let i = 0; i < errorHead.length; i++) {
-        for (let j = 0; j < errorHead.length - 1; j++) {
-            if(errorHead[j] !== undefined) {
-                if (errorHead[j].indexOf("Exception") >
-                    errorHead[j + 1].indexOf("Exception")) {
-                    let tempHead = errorHead[j];
-                    errorHead[j] = errorHead[j + 1];
-                    errorHead[j + 1] = tempHead;
-                    let tempSection = errorSection[j];
-                    errorSection[j] = errorSection[j + 1];
-                    errorSection[j + 1] = tempSection;
-                    let tempDoc = errorDoc[j];
-                    errorDoc[j] = errorDoc[j + 1];
-                    errorDoc[j + 1] = tempDoc;
-                }
-            }
-        }
-    }
+    // // Sort Section
+    // for (let i = 0; i < errorHead.length; i++) {
+    //     for (let j = 0; j < errorHead.length - 1; j++) {
+    //         if(errorHead[j] !== undefined) {
+    //             if (errorHead[j].indexOf("Exception") >
+    //                 errorHead[j + 1].indexOf("Exception")) {
+    //                 let tempHead = errorHead[j];
+    //                 errorHead[j] = errorHead[j + 1];
+    //                 errorHead[j + 1] = tempHead;
+    //                 let tempSection = errorSection[j];
+    //                 errorSection[j] = errorSection[j + 1];
+    //                 errorSection[j + 1] = tempSection;
+    //                 let tempDoc = errorDoc[j];
+    //                 errorDoc[j] = errorDoc[j + 1];
+    //                 errorDoc[j + 1] = tempDoc;
+    //             }
+    //         }
+    //     }
+    // }
 }
 // Key : Value Object Transfer
 app.get("/", function (req, res) {
