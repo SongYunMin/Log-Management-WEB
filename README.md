@@ -15,7 +15,7 @@
 
 - 크롤링을 이용하여 모든 예외를 받아오고 레퍼런스와 연결해야 함
 
-## Tech Skil
+## Tech Skills
 
 - HTML/CSS
 - Javascript
