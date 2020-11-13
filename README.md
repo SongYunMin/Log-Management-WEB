@@ -1,4 +1,4 @@
-# Log Management WEB(구현중)
+# Log Management WEB
 
 ## 프로젝트 배경
 
