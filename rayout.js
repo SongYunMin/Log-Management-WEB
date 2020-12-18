@@ -60,8 +60,6 @@ function main() {
     errorDocInit = errorDoc[0];
 }
 
-
-
 // 로그 출력
 // TODO : 로그를 로딩 하는 시간이 오래 걸림
 app.get("/", function (req, res) {
