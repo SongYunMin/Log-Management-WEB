@@ -20,3 +20,4 @@
 - HTML/CSS
 - Javascript
 - Node.JS
+- Android Debug Shell
